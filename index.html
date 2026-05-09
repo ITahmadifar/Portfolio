@@ -691,8 +691,50 @@
   @media (max-width: 900px) {
     nav { padding: 1.2rem 2rem; }
     section { padding: 5rem 2rem; }
-    #hero { grid-template-columns: 1fr; }
-    .hero-right { display: none; }
+
+    #hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+
+    .hero-left {
+      padding: 7rem 2rem 2rem 2rem;
+      order: 2;
+    }
+
+    .hero-right {
+      display: flex;
+      order: 1;
+      padding-top: 6rem;
+      justify-content: center;
+    }
+
+    .hero-photo-wrap {
+      padding: 0 2rem 1rem 2rem;
+    }
+
+    .photo-frame {
+      width: 220px;
+    }
+
+    .hero-photo {
+      height: 270px;
+    }
+
+    .photo-tag-1, .photo-tag-2 {
+      right: -10px;
+      font-size: 0.55rem;
+      padding: 0.3rem 0.6rem;
+    }
+    .photo-tag-2 { top: 56px; }
+
+    .photo-badge {
+      left: -16px;
+      bottom: -16px;
+      padding: 0.7rem 0.9rem;
+    }
+    .badge-num-txt { font-size: 1.4rem; }
+
     .about-grid, .tracks-grid, .edu-grid, .skills-grid { grid-template-columns: 1fr; }
     .project-row { grid-template-columns: 1fr; gap: 1rem; }
     .project-meta { display: none; }
