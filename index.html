@@ -178,12 +178,12 @@
         const content = {
             ml: {
                 title: "Network Engineer | Network Administrator | MSc Graduate in Computer Vision & Data Science",
-                summary: "Machine Learning Engineer with over 10 years of engineering experience in IT systems, currently pursuing an MSc in Computer Vision and Data Science. Experienced in developing end-to-end machine learning pipelines and applying deep learning methods to real-world problems, with a focus on anomaly detection and structured prediction. Combines strong system engineering background with applied machine learning, aiming to build robust and scalable solutions for real-world applications.",
+                summary: "Engineer with over 10 years of experience in IT systems and a recent MSc in Computer Vision & Data Science from NHL Stenden University of Applied Sciences. Experienced in applied machine learning and computer vision research, including deep learning with PyTorch, hierarchical image classification, feature fusion, anomaly detection, clustering-based data analysis, and model evaluation. Combines system-level engineering experience with applied AI skills to build practical and reliable technical solutions."
                 experience: [
                     {
-                        role: "Freelance Machine Learning Engineer",
-                        comp: "Remote / Academic Projects",
-                        date: "2025 - 2026",
+                    role: "Machine Learning & Computer Vision Research Projects",
+                    comp: "Academic / Applied Research",
+                    date: "2025 - 2026",
                         bullets: [
                             "Designed and implemented deep learning modules for computer vision tasks, including feature fusion and representation learning.",
                             "Developed spatial cross-attention mechanisms to improve feature integration across hierarchical model levels.",
@@ -219,7 +219,7 @@
             },
             it: {
                 title: "Network Engineer | Network Administrator | MSc Graduate in Computer Vision & Data Science",
-                summary: "IT Systems Engineer with over 10 years of experience in system administration, automation, and technical problem solving. Experienced in designing and maintaining reliable IT infrastructure, managing databases, and improving system performance through automation and data-driven approaches. Recently expanded expertise into machine learning and data analysis, bringing additional capabilities in data processing and modern software tools.",
+                summary: "IT Systems and Network Engineer with over 10 years of experience in system administration, network administration, infrastructure maintenance, automation, and technical problem solving. Experienced in maintaining reliable IT environments, managing databases, troubleshooting systems, and improving operational performance through automation and data-driven approaches. Recently graduated with an MSc in Computer Vision & Data Science, adding machine learning, data analysis, and modern software skills to a strong infrastructure background."
                 experience: [
                     {
                         role: "IT Manager",
@@ -249,30 +249,30 @@
         const projectData = {
             ml: [
                 {
-                    title: "Bacterial Growth Detection using Anomaly Detection (CPR)",
-                    type: "Research & Practical Experience",
-                    desc: "Developed an anomaly detection pipeline for early detection of bacterial growth in high-resolution Petri-dish images.",
+                    title: "Confidential Laboratory Imaging Anomaly Detection Project",
+                    type: "Applied Research Project",
+                    desc: "Worked on an applied computer vision project involving anomaly detection in laboratory imaging. Public details are limited due to confidentiality.",
                     bullets: [
-                        "Adapted Cascade Patch Retrieval (CPR) framework to biomedical data with multiple engineering improvements.",
-                        "Designed preprocessing pipeline including circular cropping, quadrant-based tiling, and rotation alignment.",
-                        "Implemented memory-efficient inference using online k-NN retrieval and optimized feature handling.",
-                        "Conducted systematic experiments on backbone selection, input resolution, and tiling strategies."
+                        "Explored retrieval-based anomaly detection methods for detecting subtle visual deviations.",
+                        "Designed preprocessing and evaluation workflows for high-resolution image data.",
+                        "Compared model configurations with a focus on reducing false negatives.",
+                        "Worked under confidentiality constraints while maintaining reproducible internal research documentation."
                     ],
-                    outcome: "Reduced false negatives to 7 out of 1000+ samples (~0.7%). Achieved higher recall compared to PatchCore baseline. Demonstrated effectiveness of retrieval-based anomaly detection for subtle biomedical patterns.",
-                    tech: ["PyTorch", "CNN (DenseNet, ResNet)", "Anomaly Detection (CPR, PatchCore)", "UMAP", "K-NN"]
+                    outcome: "Improved practical understanding of anomaly detection, model evaluation, and applied research under real-world confidentiality constraints.",
+                    tech: ["Python", "PyTorch", "Computer Vision", "Anomaly Detection", "Model Evaluation"]
                 },
                 {
-                    title: "Hierarchical Few-Shot Insect Classification",
-                    type: "Research & Practical Experience",
-                    desc: "Designed a hierarchical multi-head deep learning model based on biological taxonomy.",
+                    title: "Taxonomy-Aware Hierarchical Insect Classification",
+                    type: "Graduation Research Project",
+                    desc: "Developed a taxonomy-aware deep learning approach for fine-grained in-flight insect image classification in agricultural monitoring.",
                     bullets: [
-                        "Implemented taxonomy-aware training with partial-label handling and masked loss functions.",
-                        "Developed constraint-based decoding using taxonomy structures for valid prediction paths.",
-                        "Explored few-shot learning strategies including supervised contrastive learning (SupCon).",
-                        "Implemented cross-attention mechanisms for inter-level feature fusion."
+                        "Built shared-backbone multi-head models for prediction across biological taxonomy levels.",
+                        "Handled partial taxonomy labels using masked, class-weighted cross-entropy loss.",
+                        "Implemented and compared parent-to-child feature fusion strategies, including concatenation, gated fusion, and spatial cross-attention.",
+                        "Applied taxonomy-constrained decoding to produce biologically consistent prediction paths."
                     ],
-                    outcome: "Achieved high accuracy at upper taxonomy levels (~96% at Order level). Gained practical insights into combining hierarchical modeling with limited data scenarios.",
-                    tech: ["PyTorch", "CNN (ResNet)", "Cross-Attention", "SupCon"]
+                    outcome: "Best configuration using ConvNeXt-Tiny with spatial cross-attention and taxonomy-constrained decoding achieved 0.936 mean Macro F1 and 0.951 grouped-label accuracy.",
+                    tech: ["PyTorch", "ConvNeXt-Tiny", "Hierarchical Classification", "Cross-Attention", "Taxonomy-Constrained Decoding"]
                 }
             ],
             it: [
