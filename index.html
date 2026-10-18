@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmad Ahmadifar - Interactive Resume</title>
+    <title>Ahmad Ahmadifar | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -66,7 +66,7 @@
                     class="w-48 h-48 object-cover rounded-full border-4 border-white shadow-xl" />
             </div>
             <h1 class="text-5xl font-extrabold text-gray-900 mb-3 tracking-tight">AHMAD AHMADIFAR</h1>
-            <p class="text-xl text-amber-700 font-semibold mb-6 tracking-wide" id="main-title">Network Engineer | Network Administrator | MSc Graduate in Computer Vision & Data Science</p>
+            <p class="text-xl text-amber-700 font-semibold mb-6 tracking-wide" id="main-title">Machine Learning | Computer Vision | MSc Graduate in Computer Vision &amp; Data Science</p>
             
             <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-gray-600 mb-8 font-medium">
                 <span class="flex items-center bg-gray-100 px-3 py-1 rounded-full">📍Netherlands</span>
@@ -82,25 +82,29 @@
 
         <!-- View Toggle -->
         <div class="flex justify-center mb-12 fade-in">
-            <div class="inline-flex p-1.5 bg-gray-200 rounded-2xl shadow-inner">
-                <button onclick="switchView('ml')" id="btn-ml" class="px-8 py-3 rounded-xl font-bold transition-all duration-300 bg-white shadow-sm text-amber-700 transform scale-100">💻 Machine Learning & Computer Vision</button>
-                <button onclick="switchView('it')" id="btn-it" class="px-8 py-3 rounded-xl font-bold transition-all duration-300 text-gray-500 hover:text-gray-900">⚙️ IT Infrastructure & Systems</button>
+            <div class="inline-flex flex-col sm:flex-row gap-1 p-1.5 bg-gray-200 rounded-2xl shadow-inner">
+                <button onclick="switchView('ml')" id="btn-ml">💻 Machine Learning & Computer Vision</button>
+                <button onclick="switchView('it')" id="btn-it">⚙️ IT Infrastructure & Networking</button>
             </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            <!-- Left Column: Summary, Skills Chart, Education -->
+
+            <!-- Left Column -->
             <div class="lg:col-span-1 flex flex-col gap-8">
-                <!-- Summary -->
                 <section class="glass-card p-6 rounded-2xl shadow-sm border-t-4 border-amber-600">
-                    <h3 class="text-sm font-bold mb-3 uppercase tracking-wider text-gray-500">Professional Summary</h3>
-                    <p id="summary-text" class="text-gray-800 leading-relaxed text-sm">
-                        <!-- Injected by JS -->
-                    </p>
+                    <h3 class="text-sm font-bold mb-3 uppercase tracking-wider text-gray-500">Summary</h3>
+                    <div id="summary-text" class="text-gray-800 leading-relaxed text-sm space-y-3"></div>
                 </section>
 
-                <!-- Skills Chart -->
+                <section class="glass-card p-6 rounded-2xl shadow-sm">
+                    <h3 class="text-sm font-bold mb-3 uppercase tracking-wider text-gray-500">Work Authorization</h3>
+                    <ul class="text-gray-700 text-sm space-y-2 list-disc list-outside ml-4">
+                        <li class="pl-1">Dutch Orientation Year (Zoekjaar) residence permit as a graduate of NHL Stenden University of Applied Sciences. No sponsorship required during this permit.</li>
+                        <li class="pl-1">Eligible afterwards for a Dutch highly skilled migrant (kennismigrant) permit under the reduced salary criterion for graduates of Dutch universities (€3,122 gross per month), through an IND recognised sponsor.</li>
+                    </ul>
+                </section>
+
                 <section class="glass-card p-6 rounded-2xl shadow-sm">
                     <h3 class="text-sm font-bold mb-4 uppercase tracking-wider text-gray-500">Skill Spectrum</h3>
                     <div class="chart-container">
@@ -108,56 +112,46 @@
                     </div>
                 </section>
 
-                <!-- Education -->
                 <section class="glass-card p-6 rounded-2xl shadow-sm">
                     <h3 class="text-sm font-bold mb-4 uppercase tracking-wider text-gray-500">Education</h3>
                     <div class="space-y-5">
                         <div class="relative pl-4 border-l-2 border-amber-300">
                             <div class="absolute w-2 h-2 bg-amber-600 rounded-full -left-[5px] top-1.5"></div>
                             <p class="font-bold text-gray-900 text-sm">MSc in Computer Vision and Data Science</p>
-                            <p class="text-xs text-gray-600 mt-1">NHL Stenden University, Netherlands</p>
+                            <p class="text-xs text-gray-600 mt-1">NHL Stenden University of Applied Sciences, Netherlands</p>
+                            <p class="text-xs text-amber-700 font-medium mt-1">Sep 2025 – Jul 2026</p>
                         </div>
                         <div class="relative pl-4 border-l-2 border-gray-200">
                             <div class="absolute w-2 h-2 bg-gray-400 rounded-full -left-[5px] top-1.5"></div>
-                            <p id="bachelors-title" class="font-bold text-gray-900 text-sm">Bachelor's Degree</p>
-                            <p id="bachelors-sub" class="text-xs text-gray-600 mt-1">K.N. Toosi University of Technology (KNTU), Iran</p>
+                            <p class="font-bold text-gray-900 text-sm">Bachelor's Degree in Mechanical Engineering</p>
+                            <p class="text-xs text-gray-600 mt-1">K.N. Toosi University of Technology (KNTU), Iran</p>
+                            <p class="text-xs text-amber-700 font-medium mt-1">Sep 2008 – Jun 2013</p>
                         </div>
                     </div>
                 </section>
             </div>
 
-            <!-- Right Column: Experience, Projects, Tech Skills -->
+            <!-- Right Column -->
             <div class="lg:col-span-2 flex flex-col gap-8">
-                
-                <!-- Work Experience -->
                 <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 fade-in">
                     <h3 class="text-xl font-bold mb-6 flex items-center text-gray-900 border-b pb-3 border-gray-100">
                         <span class="text-xl mr-2">💼</span> Work Experience
                     </h3>
-                    <!-- THIS ID WAS MISSING AND CAUSED THE ERROR -->
-                    <div id="experience-content" class="space-y-8">
-                        <!-- Content injected by JS -->
-                    </div>
+                    <div id="experience-content" class="space-y-8"></div>
                 </section>
 
-                <!-- Projects -->
                 <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 fade-in">
                     <h3 class="text-xl font-bold mb-6 flex items-center text-gray-900 border-b pb-3 border-gray-100">
-                        <span class="text-xl mr-2">🚀</span> Projects & Research Experience
+                        <span class="text-xl mr-2">🚀</span> <span id="projects-heading">Projects</span>
                     </h3>
-                    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <!-- Content injected by JS -->
-                    </div>
+                    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
                 </section>
 
-                <!-- Technical Skills Breakdown -->
                 <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 fade-in mb-8">
                     <h3 class="text-xl font-bold mb-6 flex items-center text-gray-900 border-b pb-3 border-gray-100">
                         <span class="text-xl mr-2">🛠️</span> Technical Skills
                     </h3>
-                    <div id="bottom-skills-container" class="text-sm text-gray-700 leading-relaxed grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                        <!-- Content injected by JS -->
-                    </div>
+                    <div id="bottom-skills-container" class="text-sm text-gray-700 leading-relaxed grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5"></div>
                 </section>
             </div>
         </div>
@@ -166,84 +160,150 @@
     <!-- Project Detail Modal -->
     <div id="project-modal" class="fixed inset-0 bg-gray-900 bg-opacity-60 hidden flex items-center justify-center p-4 z-50 transition-opacity backdrop-blur-sm">
         <div class="bg-white rounded-2xl max-w-2xl w-full p-8 relative overflow-y-auto max-h-[90vh] shadow-2xl fade-in border-t-8 border-amber-600">
-            <button onclick="closeModal()" class="absolute top-5 right-5 text-gray-400 hover:text-red-500 text-3xl font-light leading-none">&times;</button>
-            <div id="modal-body">
-                <!-- Content injected by JS -->
-            </div>
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-gray-400 hover:text-red-500 text-3xl font-light leading-none" aria-label="Close">&times;</button>
+            <div id="modal-body"></div>
         </div>
     </div>
 
     <script>
-        // Data Definitions based on the FULL text provided by the user
+        // ---------- Content (source: CVs, Oct 2026) ----------
         const content = {
             ml: {
-                title: "Network Engineer | Network Administrator | MSc Graduate in Computer Vision & Data Science",
-                summary: "Engineer with over 10 years of experience in IT systems and a recent MSc in Computer Vision & Data Science from NHL Stenden University of Applied Sciences. Experienced in applied machine learning and computer vision research, including deep learning with PyTorch, hierarchical image classification, feature fusion, anomaly detection, clustering-based data analysis, and model evaluation. Combines system-level engineering experience with applied AI skills to build practical and reliable technical solutions.",
+                title: "Machine Learning | Computer Vision | MSc Graduate in Computer Vision & Data Science",
+                summary: [
+                    "Computer Vision and Machine Learning Engineer with a recent MSc in Computer Vision & Data Science from NHL Stenden University of Applied Sciences. Experienced in applied machine learning and computer vision research, including deep learning with PyTorch, hierarchical image classification, feature fusion, anomaly detection, clustering-based data analysis, and model evaluation.",
+                    "Brings over 10 years of prior IT systems experience, combining system-level engineering, automation, infrastructure awareness, and applied AI skills to build practical and reliable technical solutions for real-world problems."
+                ],
                 experience: [
                     {
-                    role: "Machine Learning & Computer Vision Research Projects",
-                    comp: "Academic / Applied Research",
-                    date: "2025 - 2026",
+                        role: "Machine Learning & Computer Vision Research Projects",
+                        comp: "Academic / Applied Research · NHL Stenden University",
+                        date: "Sep 2025 – Jul 2026",
+                        note: "Alongside education",
                         bullets: [
                             "Designed and implemented deep learning modules for computer vision tasks, including feature fusion and representation learning.",
                             "Developed spatial cross-attention mechanisms to improve feature integration across hierarchical model levels.",
                             "Built and evaluated anomaly detection pipelines using reconstruction-based and retrieval-based approaches.",
                             "Designed preprocessing pipelines and conducted controlled experiments to evaluate model performance and robustness.",
                             "Developed unsupervised data analysis pipelines using clustering techniques (UMAP, HDBSCAN) for dataset exploration and quality improvement.",
-                            "Created visualization tools for model outputs, feature distributions, and anomaly detection results.",
-                            "<span class='font-semibold text-amber-700'>Technologies:</span> PyTorch, CNNs, Transformer-based models, UMAP, HDBSCAN, NumPy, Pandas."
-                        ]
+                            "Created visualization tools for model outputs, feature distributions, and anomaly detection results."
+                        ],
+                        tech: "PyTorch, CNNs, Transformer-based models, UMAP, HDBSCAN, NumPy, Pandas"
                     },
                     {
                         role: "IT Manager",
                         comp: "Nasir Educational Services Center",
-                        date: "2014 - 2025",
+                        date: "Sep 2023 – Aug 2025",
                         bullets: [
-                            "Designed and maintained IT infrastructure supporting daily operations and digital services.",
-                            "Developed automation workflows to reduce manual processes and improve system efficiency.",
-                            "Managed databases and performed data analysis to support operational decision-making.",
-                            "Led system troubleshooting, improving reliability and reducing downtime across services.",
-                            "Built and maintained web platforms and digital tools for educational services.",
+                            "Led a team of 4 IT staff, overseeing daily support operations and mentoring team members while maintaining overall responsibility for the organization's IT infrastructure.",
+                            "Built and maintained 5 internal web platforms and digital tools, including student registration and reporting systems used across the organization for daily academic and administrative operations.",
                             "Worked with structured data and system logs to improve performance and operational insights."
+                        ]
+                    },
+                    {
+                        role: "IT Systems Administrator",
+                        comp: "Nasir Educational Services Center",
+                        date: "Sep 2017 – Aug 2023",
+                        bullets: [
+                            "Designed and maintained IT infrastructure across two multi-story buildings, supporting approximately 100 users, including servers, switches, routers, and printers.",
+                            "Wrote 10 automation scripts covering scheduled backups, user account provisioning, system health monitoring with alert notifications, and log and report generation, cutting 1 to 3 hours of manual work per week and reducing configuration errors.",
+                            "Managed databases containing student records and financial data, writing SQL queries and preparing reports that supported management decisions on enrollment trends, classroom capacity, and budgeting."
+                        ]
+                    },
+                    {
+                        role: "IT Support Specialist",
+                        comp: "Nasir Educational Services Center",
+                        date: "Sep 2013 – Aug 2017",
+                        bullets: [
+                            "Resolved 15 to 25 support requests per week, improving reliability through proactive monitoring and preventive maintenance."
                         ]
                     }
                 ],
-                bachelors: "Bachelor's Degree in Mechanical Engineering",
-                skills_html: `
-                    <div><h4 class="font-bold text-gray-900 mb-1">Machine Learning & Computer Vision</h4><p>PyTorch, Deep Learning, Computer Vision, Image Classification, Hierarchical Classification, Anomaly Detection, Model Evaluation</p></div>
-                    <div><h4 class="font-bold text-gray-900 mb-1">Data & Analysis</h4><p>Python, NumPy, Pandas, Matplotlib, Scikit-learn, Clustering, Data Preprocessing</p></div>
-                    <div><h4 class="font-bold text-gray-900 mb-1">Cloud & Engineering</h4><p>Microsoft Azure Fundamentals (AZ-900 level), Git, GitHub, Linux, REST APIs, Workflow Automation</p></div>
-                    <div><h4 class="font-bold text-gray-900 mb-1">Research & Deployment Awareness</h4><p>Experiment Design, Model Comparison, Performance Evaluation, ONNX, Applied Research Documentation</p></div>
-                `,
-                chart_data: [90, 85, 80, 85, 75, 80] // Python, Deep Learning, CV, Modeling, Automation, Systems
+                projectsHeading: "Research & Practical Experience",
+                skills: [
+                    { name: "Machine Learning & Computer Vision", items: "PyTorch, Deep Learning, Computer Vision, Image Classification, Hierarchical Classification, Anomaly Detection, Model Evaluation" },
+                    { name: "Data & Analysis", items: "Python, NumPy, Pandas, Matplotlib, Scikit-learn, Clustering, Data Preprocessing" },
+                    { name: "Cloud & Engineering", items: "Microsoft Azure Fundamentals (AZ-900 level), Git, GitHub, Linux, Workflow Automation" },
+                    { name: "Research & Deployment Awareness", items: "Experiment Design, Model Comparison, Performance Evaluation, ONNX, Applied Research Documentation" }
+                ],
+                // Self-assessed values (0-100). Adjust as you like.
+                chart: {
+                    labels: ['Python', 'Deep Learning', 'Computer Vision', 'Data Analysis', 'Model Evaluation', 'IT Systems'],
+                    values: [85, 85, 85, 80, 80, 90]
+                }
             },
             it: {
-                title: "Network Engineer | Network Administrator | MSc Graduate in Computer Vision & Data Science",
-                summary: "IT Systems and Network Engineer with over 10 years of experience in system administration, network administration, infrastructure maintenance, automation, and technical problem solving. Experienced in maintaining reliable IT environments, managing databases, troubleshooting systems, and improving operational performance through automation and data-driven approaches. Recently graduated with an MSc in Computer Vision & Data Science, adding machine learning, data analysis, and modern software skills to a strong infrastructure background.",
+                title: "Network Engineer | Network Administrator | IT Systems Engineer",
+                summary: [
+                    "IT systems and network engineer with 12 years at one organization, from support specialist to IT manager. Led the redesign of an unstable two-building network for about 100 users, migrated the phone system from Kerio Operator to 3CX with minimal downtime, and cut 1 to 3 hours of manual work a week with automation scripts.",
+                    "Holds an MSc in Computer Vision and Data Science (NHL Stenden, 2026) and is based in the Netherlands."
+                ],
                 experience: [
                     {
                         role: "IT Manager",
                         comp: "Nasir Educational Services Center",
-                        date: "2014 - 2025",
+                        date: "Sep 2023 – Aug 2025",
                         bullets: [
-                            "Designed and maintained IT infrastructure supporting daily operations and digital services.",
-                            "Developed automation workflows to reduce manual processes and improve system efficiency.",
-                            "Managed databases and performed data analysis to support operational decision-making.",
-                            "Led system troubleshooting, improving reliability and reducing downtime across services.",
-                            "Built and maintained web platforms and digital tools for educational services.",
-                            "Worked with structured data and system logs to improve performance and operational insights."
+                            "Led a team of 4 IT staff handling about 60 tickets a month in Jira Service Management, with a typical resolution time of under 24 hours, and owned the organization's IT infrastructure.",
+                            "Ran asset management for about 130 devices: asset registration and tagging, inventory management, warranty coordination with vendors, and disposal of retired devices.",
+                            "Planned and carried out office moves, including workstation relocations.",
+                            "Built about 5 internal web platforms, including student registration and reporting systems that replaced paper and Excel processes.",
+                            "Used Windows Server event logs to find and fix performance problems. For example, traced slow domain logons to DNS resolution delays and resolved them for 80+ users.",
+                            "Managed the 3CX phone system, coordinating support and configuration changes to keep it available.",
+                            "Coordinated remote administration of servers and critical systems to keep disruption to daily operations low.",
+                            "Tracked ticket volumes, incidents and SLA performance in Jira Service Management across the organization."
+                        ]
+                    },
+                    {
+                        role: "IT Systems Administrator",
+                        comp: "Nasir Educational Services Center",
+                        date: "Sep 2017 – Aug 2023",
+                        bullets: [
+                            "Led the redesign and replacement of an unstable network across two buildings (about 100 users: servers, switches, routers). Network complaints dropped by roughly 80%, with no major outages afterward.",
+                            "Handled device provisioning and deprovisioning and hardware refresh projects, imaging and setting up desktops and laptops and taking old devices out of service.",
+                            "Installed and supported AV equipment (classroom and hall projectors) and digital signage.",
+                            "Administered servers and networked systems remotely over RDP, fixing service and connectivity issues without on-site visits.",
+                            "Cut 1 to 3 hours of manual work a week and reduced configuration errors with about 10 scripts for backups, account provisioning, health monitoring and reporting.",
+                            "Wrote SQL reports on student and financial data that management used to forecast enrollment, plan classroom capacity and set budgets.",
+                            "Led the migration from Kerio Operator to 3CX for about 100 users, with minimal downtime, lower costs and simpler management through the web console, softphone and mobile app.",
+                            "Cut missed and misrouted calls by configuring IVR and call queues, and handled day-to-day 3CX administration: SIP trunks, extensions and call-flow troubleshooting.",
+                            "Replaced email, Telegram/WhatsApp and phone requests with Jira Service Management for about 100 users, with workflows, SLAs and dashboards to track incidents and requests."
+                        ]
+                    },
+                    {
+                        role: "IT Support Specialist",
+                        comp: "Nasir Educational Services Center",
+                        date: "Sep 2013 – Aug 2017",
+                        bullets: [
+                            "Resolved 15 to 25 support requests a week across network, hardware and software on Windows, macOS, Linux and mobile devices, most of them the same day.",
+                            "Supported staff and students remotely with AnyDesk, TeamViewer and RDP, including during online exams and classes.",
+                            "Imaged and set up desktops and laptops for staff, and supported classroom projectors and digital signage.",
+                            "Built the organization's WooCommerce e-commerce site from scratch and managed hosting, DNS, SSL and backups for it and the corporate site.",
+                            "Supported the Kerio Operator phone system for about 100 users: extensions, IP phones, registration and call routing."
                         ]
                     }
                 ],
-                bachelors: "Bachelor's Degree in Mechanical Engineering",
-                skills_html: `
-                    <div><h4 class="font-bold text-gray-900 mb-1">Network & Infrastructure</h4><p>Network Administration, IT Infrastructure, System Administration, Troubleshooting, Monitoring, Backup & Recovery</p></div>
-                    <div><h4 class="font-bold text-gray-900 mb-1">Cloud & Azure</h4><p>Microsoft Azure, Azure Fundamentals (AZ-900 level), Azure Administration (AZ-104 level), Cloud Concepts, Identity, Virtual Networks, Storage, Monitoring</p></div>
-                    <div><h4 class="font-bold text-gray-900 mb-1">Systems & Tools</h4><p>Linux (Ubuntu), Windows Systems, Databases, Web Systems, Git, GitHub</p></div>
-                    <div><h4 class="font-bold text-gray-900 mb-1">Programming & Automation</h4><p>Python, C++, SQL, REST APIs, Workflow Automation, Log Analysis</p></div>
-                    <div><h4 class="font-bold text-gray-900 mb-1">Additional AI/Data Skills</h4><p>Data Processing, Pandas, NumPy, Basic Machine Learning and Computer Vision</p></div>
-                `,
-                chart_data: [90, 40, 30, 40, 95, 95] // Linux, Python, SQL, Networking, Automation, Systems (Adapted labels for IT mode visually)
+                projectsHeading: "Projects & Technical Experience",
+                skills: [
+                    { name: "System Administration", items: "Windows Server (2016/2019/2022), VMware, Active Directory & GPO, Hyper-V & Server Virtualization, Network Services (DNS, DHCP, IIS), Enterprise System Troubleshooting" },
+                    { name: "Network Infrastructure", items: "TCP/IP, Routing/Switching, VLAN, VPN, Firewalls, Cabling" },
+                    { name: "VoIP & IP Telephony", items: "Kerio Operator, 3CX, Issabel PBX, IP-PBX Administration, SIP Trunking, DID, IVR, Inbound/Outbound Call Routing, Ring Groups, Call Queues, Extensions, Voicemail, Call Forwarding, Call Recording, VoIP Troubleshooting, PBX Migration" },
+                    { name: "Microsoft 365 & Endpoint Management", items: "Microsoft Intune, Microsoft Entra ID (Azure AD), Microsoft 365 Admin Center, Endpoint Management, Device Enrollment, Configuration Profiles, Compliance Policies, Conditional Access, Endpoint Security, BitLocker Management, Windows Update Management, Application Deployment, Device Restrictions, Remote Device Actions, Intune Reporting" },
+                    { name: "Cloud & Azure", note: "Actively building Microsoft Azure skills through self-directed study, working toward AZ-900 and AZ-104 certification.", items: "Microsoft Azure, Azure Fundamentals (AZ-900 level), Azure Administration (AZ-104 level), Cloud Concepts, Virtual Networks, Storage, Monitoring" },
+                    { name: "End-User & Desktop Support", items: "Desktop Support, Hardware and Software Troubleshooting, Windows, macOS, Linux, Mobile Devices, Printers and Peripherals, Onsite IT Support" },
+                    { name: "Asset Management & Site Support", items: "Hardware Asset Registration and Tagging, Inventory Management, Imaging, Device Provisioning and Deprovisioning, Warranty Coordination, Device Disposal, Hardware Refresh, Office Moves, Workstation Relocations, AV Equipment, Digital Signage" },
+                    { name: "IT Service Management & Ticketing", items: "Jira Service Management, Incident Management, Service Requests, Change Requests, Task Management, Bug Tracking, SLA Management, Workflow Configuration, Issue Types, Ticket Management, Dashboards, Reporting, Automation Rules" },
+                    { name: "Remote Support & Administration", items: "AnyDesk, TeamViewer, Microsoft Remote Desktop (RDP), Remote Troubleshooting, Remote Server Administration, Remote Technical Support" },
+                    { name: "Web Systems & Hosting", items: "WordPress, Hosting Management, Domain Management, DNS, SSL, Website Maintenance, Web Systems, Databases" },
+                    { name: "Programming & Automation", items: "Python, C++, Workflow Automation, Log Analysis" },
+                    { name: "Systems & Tools", items: "Windows Systems, Git, GitHub, Web Systems, Databases" },
+                    { name: "Additional AI/Data Skills", items: "Pandas, NumPy, Data Processing, Basic Machine Learning and Computer Vision" }
+                ],
+                // Self-assessed values (0-100). Adjust as you like.
+                chart: {
+                    labels: ['Networking', 'Windows Server', 'VoIP / PBX', 'M365 & Intune', 'Support & ITSM', 'Automation'],
+                    values: [90, 85, 85, 70, 90, 70]
+                }
             }
         };
 
@@ -252,6 +312,7 @@
                 {
                     title: "Taxonomy-Aware Hierarchical Insect Classification",
                     type: "Graduation Research Project",
+                    date: "Feb 2026 – Jun 2026",
                     desc: "Developed a taxonomy-aware deep learning approach for fine-grained in-flight insect image classification in agricultural monitoring.",
                     bullets: [
                         "Built shared-backbone multi-head models for prediction across biological taxonomy levels.",
@@ -265,6 +326,7 @@
                 {
                     title: "Confidential Laboratory Imaging Anomaly Detection Project",
                     type: "Applied Research Project",
+                    date: "Sep 2025 – Jan 2026",
                     desc: "Worked on an applied computer vision project involving anomaly detection in laboratory imaging. Public details are limited due to confidentiality.",
                     bullets: [
                         "Explored retrieval-based anomaly detection methods for detecting subtle visual deviations.",
@@ -272,58 +334,82 @@
                         "Compared model configurations with a focus on reducing false negatives.",
                         "Worked under confidentiality constraints while maintaining reproducible internal research documentation."
                     ],
-                    outcome: "Improved practical understanding of anomaly detection, model evaluation, and applied research under real-world confidentiality constraints.",
                     tech: ["Python", "PyTorch", "Computer Vision", "Anomaly Detection", "Model Evaluation"]
                 }
             ],
             it: [
                 {
-                    title: "Enterprise IT Infrastructure Automation",
-                    type: "Systems Engineering Project",
-                    desc: "Developed and implemented automated workflows for system deployment, monitoring, and routine maintenance across the educational center's network.",
+                    title: "Two-Building Network Redesign",
+                    type: "Nasir Educational Services Center",
+                    date: "IT Systems Administrator, 2017 – 2023",
+                    desc: "Led the redesign and replacement of an unstable network across two buildings serving about 100 users.",
                     bullets: [
-                        "Created custom Python and shell scripts to automate routine server maintenance and database backups.",
-                        "Configured and deployed centralized monitoring solutions to proactively detect and resolve system bottlenecks.",
-                        "Standardized server deployment processes on Linux (Ubuntu) environments, significantly reducing setup time.",
-                        "Managed and parsed system logs to generate actionable insights for performance tuning."
+                        "Replaced and reorganized the network across two buildings, including servers, switches and routers.",
+                        "Supported about 100 users across both sites."
                     ],
-                    outcome: "Reduced manual administrative overhead by over 40% and improved overall system uptime and reliability for internal staff and digital services.",
-                    tech: ["Linux (Ubuntu)", "Python", "Bash Automation", "System Monitoring", "Networking"]
+                    outcome: "Network complaints dropped by roughly 80%, with no major outages afterward.",
+                    tech: ["Routing/Switching", "TCP/IP", "VLAN", "Firewalls", "Cabling"]
                 },
                 {
-                    title: "Educational Web Services & Database Optimization",
-                    type: "IT Operations Project",
-                    desc: "Architected and optimized backend databases and web service infrastructure to support daily operations and growing user traffic.",
+                    title: "Kerio Operator to 3CX Migration",
+                    type: "Nasir Educational Services Center",
+                    date: "IT Systems Administrator, 2017 – 2023",
+                    desc: "Led the phone system migration from Kerio Operator to 3CX for about 100 users.",
                     bullets: [
-                        "Optimized complex SQL queries and restructured database schemas for faster data retrieval and reporting.",
-                        "Integrated REST APIs to ensure seamless communication between various educational software modules.",
-                        "Implemented robust backup and disaster recovery protocols to ensure high availability.",
-                        "Led system troubleshooting and resolved critical infrastructure issues to minimize service downtime."
+                        "Migrated about 100 users with minimal downtime.",
+                        "Configured IVR and call queues, which cut missed and misrouted calls.",
+                        "Handled day-to-day 3CX administration: SIP trunks, extensions and call-flow troubleshooting."
                     ],
-                    outcome: "Achieved a highly available infrastructure for educational services, improving database query response times and ensuring secure, uninterrupted digital operations.",
-                    tech: ["SQL", "Databases", "Web Systems", "REST APIs", "Troubleshooting"]
+                    outcome: "Lower costs and simpler management through the 3CX web console, softphone and mobile app.",
+                    tech: ["3CX", "Kerio Operator", "SIP Trunking", "IVR", "Call Queues", "PBX Migration"]
+                },
+                {
+                    title: "Project-Based IT Infrastructure Deployments",
+                    type: "Project-Based",
+                    date: "Sep 2013 – Aug 2025 (alongside main role)",
+                    desc: "About 10 IT infrastructure deployments for small and medium businesses, from 10 to 80 users. Clients: Tire, Oil, Puncture Repair and Filter Sellers Union; ChapRouz Digital Printing & Publishing; Zaban Afarin Publications.",
+                    bullets: [
+                        "Set up and supported local network environments, including user workstations, shared resources, internet connectivity, and basic network services.",
+                        "Configured and maintained network devices, access points, printers, and internal digital tools to support daily operations.",
+                        "Handled troubleshooting, maintenance, backup planning, and reliability improvements after deployment.",
+                        "Trained 60 to 100 end users and administrators and wrote documentation, so non-technical staff could handle common issues themselves.",
+                        "Deployed Issabel PBX systems for 10 to 80 users: SIP trunks, extensions, IVR, call queues and inbound/outbound routing.",
+                        "Supported clients after go-live on SIP registration, call routing and endpoint issues. Clients handled ongoing PBX administration themselves."
+                    ],
+                    tech: ["Networking", "Access Points", "Issabel PBX", "SIP Trunking", "IVR", "Backup Planning", "Documentation"]
+                },
+                {
+                    title: "WordPress Web Systems & Hosting Support",
+                    type: "Project-Based",
+                    date: "Sep 2013 – Aug 2025 (alongside main role)",
+                    desc: "Designed, deployed, and maintained 70+ WordPress-based websites, including business, e-commerce, portfolio, personal, and corporate websites.",
+                    bullets: [
+                        "Managed hosting, domains, DNS, SSL certificates, and backups, completing 25 to 35 website migrations and resolving most routine issues within the same business day.",
+                        "Provided ongoing support to 20 to 30 active clients at a time, resolving website, email, hosting, and performance issues for non-technical users."
+                    ],
+                    tech: ["WordPress", "WooCommerce", "Hosting", "Domains & DNS", "SSL", "Backups"]
                 }
             ]
         };
 
+        // ---------- Rendering ----------
         let currentChart;
         let currentMode = 'ml';
 
-        function initChart(dataValues, mode) {
+        const btnBase = "w-full sm:w-auto px-6 sm:px-8 py-3 rounded-xl font-bold transition-all duration-300 ";
+        const btnActive = btnBase + "bg-white shadow-sm text-amber-700";
+        const btnInactive = btnBase + "text-gray-500 hover:text-gray-900";
+
+        function initChart(chartData) {
             const ctx = document.getElementById('skillsChart').getContext('2d');
             if (currentChart) currentChart.destroy();
-            
-            const labels = mode === 'ml' 
-                ? ['Python', 'Deep Learning', 'Computer Vision', 'Modeling', 'Automation', 'Systems']
-                : ['Linux', 'Python', 'SQL', 'Networking', 'Automation', 'Systems'];
-
             currentChart = new Chart(ctx, {
                 type: 'radar',
                 data: {
-                    labels: labels,
+                    labels: chartData.labels,
                     datasets: [{
                         label: 'Proficiency',
-                        data: dataValues,
+                        data: chartData.values,
                         backgroundColor: 'rgba(217, 119, 6, 0.2)',
                         borderColor: 'rgba(217, 119, 6, 1)',
                         pointBackgroundColor: 'rgba(217, 119, 6, 1)',
@@ -340,10 +426,7 @@
                             max: 100,
                             ticks: { display: false, stepSize: 20 },
                             grid: { color: 'rgba(0,0,0,0.08)' },
-                            pointLabels: {
-                                font: { family: 'Inter', size: 11, weight: '500' },
-                                color: '#4b5563'
-                            }
+                            pointLabels: { font: { family: 'Inter', size: 11, weight: '500' }, color: '#4b5563' }
                         }
                     },
                     plugins: { legend: { display: false } }
@@ -353,50 +436,42 @@
 
         function switchView(mode) {
             currentMode = mode;
-            
-            // Toggle Button Styles
-            const btnML = document.getElementById('btn-ml');
-            const btnIT = document.getElementById('btn-it');
-            const activeClasses = "px-8 py-3 rounded-xl font-bold transition-all duration-300 bg-white shadow-sm text-amber-700 transform scale-100";
-            const inactiveClasses = "px-8 py-3 rounded-xl font-bold transition-all duration-300 text-gray-500 hover:text-gray-900";
-            
-            if (mode === 'ml') {
-                btnML.className = activeClasses;
-                btnIT.className = inactiveClasses;
-            } else {
-                btnIT.className = activeClasses;
-                btnML.className = inactiveClasses;
-            }
+            const c = content[mode];
 
-            // Update Text Content
-            document.getElementById('main-title').innerText = content[mode].title;
-            document.getElementById('summary-text').innerText = content[mode].summary;
-            document.getElementById('bachelors-title').innerText = content[mode].bachelors;
-            
-            // Render Experience
-            const expContainer = document.getElementById('experience-content');
-            expContainer.innerHTML = content[mode].experience.map(item => `
+            document.getElementById('btn-ml').className = mode === 'ml' ? btnActive : btnInactive;
+            document.getElementById('btn-it').className = mode === 'it' ? btnActive : btnInactive;
+
+            document.getElementById('main-title').textContent = c.title;
+            document.getElementById('summary-text').innerHTML = c.summary.map(p => `<p>${p}</p>`).join('');
+            document.getElementById('projects-heading').textContent = c.projectsHeading;
+
+            document.getElementById('experience-content').innerHTML = c.experience.map(item => `
                 <div class="relative pl-6 border-l-2 border-gray-200">
                     <div class="absolute w-4 h-4 bg-amber-500 border-4 border-white rounded-full -left-[9px] top-1 shadow-sm"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2 gap-2">
                         <h4 class="font-bold text-lg text-gray-900">${item.role}</h4>
-                        <span class="text-xs font-bold text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full mt-2 md:mt-0">${item.date}</span>
+                        <span class="text-xs font-bold text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full whitespace-nowrap self-start">${item.date}</span>
                     </div>
-                    <p class="text-sm font-semibold text-gray-500 mb-4 uppercase tracking-wider">${item.comp}</p>
+                    <p class="text-sm font-semibold text-gray-500 mb-4 uppercase tracking-wider">${item.comp}${item.note ? ` <span class="normal-case font-normal tracking-normal">(${item.note})</span>` : ''}</p>
                     <ul class="text-gray-700 text-sm space-y-2 list-disc list-outside ml-4">
                         ${item.bullets.map(b => `<li class="pl-1">${b}</li>`).join('')}
                     </ul>
+                    ${item.tech ? `<p class="text-sm text-gray-700 mt-3"><span class="font-semibold text-amber-700">Technologies:</span> ${item.tech}</p>` : ''}
                 </div>
             `).join('');
 
-            // Render Skills Text
-            document.getElementById('bottom-skills-container').innerHTML = content[mode].skills_html;
+            document.getElementById('bottom-skills-container').innerHTML = c.skills.map(s => `
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-1">${s.name}</h4>
+                    ${s.note ? `<p class="text-gray-500 italic mb-1">${s.note}</p>` : ''}
+                    <p>${s.items}</p>
+                </div>
+            `).join('');
 
-            // Render Projects
-            const projContainer = document.getElementById('projects-grid');
-            projContainer.innerHTML = projectData[mode].map((p, index) => `
+            document.getElementById('projects-grid').innerHTML = projectData[mode].map((p, index) => `
                 <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-amber-400 hover:shadow-md transition-all cursor-pointer group" onclick="showProject(${index})">
-                    <p class="text-[10px] font-bold uppercase text-amber-600 mb-2 tracking-widest">${p.type}</p>
+                    <p class="text-[10px] font-bold uppercase text-amber-600 mb-1 tracking-widest">${p.type}</p>
+                    <p class="text-xs text-gray-500 mb-2">${p.date}</p>
                     <h4 class="text-base font-bold text-gray-900 mb-2 group-hover:text-amber-700 transition-colors">${p.title}</h4>
                     <p class="text-sm text-gray-600 mb-4 line-clamp-3">${p.desc}</p>
                     <div class="text-amber-600 text-sm font-semibold flex items-center">
@@ -405,31 +480,31 @@
                 </div>
             `).join('');
 
-            // Update Chart
-            initChart(content[mode].chart_data, mode);
+            initChart(c.chart);
+
+            // Shareable link: index.html#it opens the IT view directly
+            try { history.replaceState(null, '', mode === 'it' ? '#it' : '#ml'); } catch (e) {}
         }
 
         function showProject(index) {
             const p = projectData[currentMode][index];
-            const body = document.getElementById('modal-body');
-            
-            body.innerHTML = `
+            document.getElementById('modal-body').innerHTML = `
                 <p class="text-xs font-bold uppercase text-amber-600 mb-1 tracking-widest">${p.type}</p>
-                <h2 class="text-2xl font-bold text-gray-900 mb-6 pr-8">${p.title}</h2>
-                
+                <h2 class="text-2xl font-bold text-gray-900 mb-1 pr-8">${p.title}</h2>
+                <p class="text-sm text-gray-500 mb-6">${p.date}</p>
                 <div class="space-y-6">
+                    <p class="text-sm text-gray-700 leading-relaxed">${p.desc}</p>
                     <div>
                         <h5 class="text-sm font-bold border-b border-gray-200 pb-2 mb-3 text-gray-800">Project Details</h5>
                         <ul class="text-sm text-gray-700 space-y-2 list-disc list-outside ml-4">
                             ${p.bullets.map(b => `<li class="pl-1">${b}</li>`).join('')}
                         </ul>
                     </div>
-                    
+                    ${p.outcome ? `
                     <div class="bg-amber-50 p-5 rounded-xl border border-amber-100">
-                        <h5 class="text-sm font-bold text-amber-800 mb-2 flex items-center"><span class="mr-2">🏆</span> Key Outcomes</h5>
+                        <h5 class="text-sm font-bold text-amber-800 mb-2 flex items-center"><span class="mr-2">🏆</span> Outcome</h5>
                         <p class="text-sm text-amber-900 leading-relaxed">${p.outcome}</p>
-                    </div>
-                    
+                    </div>` : ''}
                     <div>
                         <h5 class="text-sm font-bold text-gray-800 mb-3">Technologies</h5>
                         <div class="flex flex-wrap gap-2">
@@ -438,33 +513,23 @@
                     </div>
                 </div>
             `;
-            
             document.getElementById('project-modal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
             document.getElementById('project-modal').classList.add('hidden');
-            document.body.style.overflow = 'auto'; // Restore background scrolling
+            document.body.style.overflow = 'auto';
         }
 
-        // Close modal on click outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('project-modal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-
-        // Close modal on Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeModal();
-            }
+        window.onclick = function (event) {
+            if (event.target === document.getElementById('project-modal')) closeModal();
+        };
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') closeModal();
         });
 
-        // Initialize App
-        window.onload = () => switchView('ml');
+        window.onload = () => switchView(location.hash === '#it' ? 'it' : 'ml');
     </script>
 </body>
 </html>
